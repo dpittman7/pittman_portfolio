@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 0,
+    "Title": "Mathematician at Heart",
+    "Image": "beziercurve.png",
+    "Description": "I've always been inticed with mathematics, i knew I was always simply a math guy. In my final year of undergrad, I transitioned from Computer Engineering to Applied Mathematics because I knew I wanted to take the opporunitity to finish my undergrad education developing the mathamatical maturity to describe the systems I would encounter with the understanding I will be able to aquire the skills to develop said systems through personal and professional practice. The projects in my portfolio and professional experience thus far expresses that pursuit. "
+  },
+  {
+    "Id": 1,
+    "Title": "Full-Stack Engineer by Trade",
+    "Image": "devPhoto.jpg",
+    "Description": "Just because an answer is right does not mean that it is correct. Lessons learned at my first role at Proplogix maintaining a legacy CakePHP project then contributing to a .NET CORE web application, I know that designing a solution that fits a project's paradigm is different than just developing a correct answer that meets requirements. Through practical experience brings the intuition to differentiate the two. "
+  },
+  {
+    "Id": 2,
+    "Title": "Tutoring as a Mutualistic Relationship.",
+    "Image": "tutor.jpg",
+    "Description": "The best way to learn is by conveying information in a way that is digestable to others. I've practiced peer tutoring since highschool, and managed to follow the route to be able to work as a math tutor as a job throughout college and til this day as a private tutor through people in my circle and as a agent with Coding with Kids here in Austin."
+  },
+  {
+    "Id": 3,
+    "Title": "Manga for the Win",
+    "Image": "vagabond.jpg",
+    "Description": "My current hobby is catching up on all the greats that manga has to offer. GO READ VAGABOND || HUMONCULUS!"
+  },
+  {
+    "Id": 4,
+    "Title": "We are Human",
+    "Image": "terrorize_pfp.jpg",
+    "Description": "We create becuase we are drawn to things that we feel challenged to do. I am a lifter, a fraternity brother, a family man, most importantly I am human. My reason to be here? I just want to make cool sh*t!"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 1,
+    "Title": "Ultimagaming.co - Discord Application Website",
+    "Image": "ULTIMA_logo.png",
+    "Description": "The frontend of SaaS wager project that displays user leaderboard and a rendered 3D Model hall of fame for server event results.",
+    "Stack": "MySQL, Django, Master CSS, Three.js",
+    "HasWebLink": true,
+    "WebUrl": "http://ultimagaming.co/",
+    "HasGithubLink": true,
+    "GithubUrl": "dpittman7/wagers_website",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  },
+  {
+    "Id": 2,
+    "Title": "Discord Ethereum eSport Wagers",
+    "Image": "challengeGif.gif",
+    "Description": "A Discord application that utilizes the CQRS design pattern that seperates a centralized database and a Solidity smart contract which enables decentralized record keeping and the facilitation of wagering crypto between two users.",
+    "Stack": "MySQL, Python, Solidity",
+    "HasWebLink": false,
+    "WebUrl": "",
+    "HasGithubLink": true,
+    "GithubUrl": "dpittman7/Discord-Wager",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  },
+  {
+    "Id": 3,
+    "Title": "pittman.io - Portfolio Website",
+    "Image": "portfolioLanding.png",
+    "Description": "This website. Did you use the ChatGPT Intergration? (Coming soon - the framework is here, just waiting for chatai model to be offered through api. The Davinci completion model just didn't make sense in this context.)",
+    "Stack": ".NET CORE, React, Three-React-Fiber, Reactstrap",
+    "HasWebLink": false,
+    "WebUrl": "",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  },
+  {
+    "Id": 4,
+    "Title": "Discord Internet Radio Streaming Bot",
+    "Image": "streamfinder.png",
+    "Description": "(IN DEVELOPMENT) Allows user to search various internet radio stations and select one to stream into active voice channel.",
+    "Stack": "Discord.py",
+    "HasWebLink": false,
+    "WebUrl": "",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  }
+]
