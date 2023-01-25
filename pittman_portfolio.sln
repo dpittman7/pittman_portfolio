@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "pittman_react", "pittman_react\pittman_react.esproj", "{DF83F8EF-93D4-4B6B-8A7D-D525C925C4D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pittman_mvc", "pittman_mvc\pittman_mvc.csproj", "{C95A5581-C837-4E93-8BD7-16973575BF7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "portfolio", "pittman_mvc\portfolio.csproj", "{C95A5581-C837-4E93-8BD7-16973575BF7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

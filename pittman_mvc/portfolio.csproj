@@ -13,4 +13,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\pittman_react\pittman_react.esproj">
+		    <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+		</ProjectReference>
+	</ItemGroup>
+
 </Project>
