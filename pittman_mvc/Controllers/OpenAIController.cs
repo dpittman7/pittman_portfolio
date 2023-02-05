@@ -13,41 +13,44 @@ namespace pittman_mvc.Controllers
 {
     [ApiController]
     [Route("/api/openAI")]
-    //https://localhost:7274/api/openAI
+    //https://localhost:7274/api/openAI/
     public class OpenAIController : ControllerBase
 
     {
         //Update to leverage dependency injection before posting to production.
         // https://github.com/betalgo/openai
+        // "
 
         public OpenAIController()
         {
-           
+            
         }
 
 
 
-        [HttpGet("{prompt}")]
-        public String GetGPTResponse(string prompt)
+        [HttpPost]
+        public String GetGPTResponse()
         {
-           Console.WriteLine(prompt);
-           string response = HandleGPTRequest(prompt).Result;
+
+           string response = HandleGPTRequest().Result;
            return response;
         }
-        async public Task<String> HandleGPTRequest(String prompt)
+        async public Task<String> HandleGPTRequest()
         {
-
+            string requestBody = await new StreamReader(Request.Body).ReadToEndAsync();
+            Console.WriteLine(requestBody);
+            string apikey = "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"; //Environment.GetEnvironmentVariable("OPENAPI_KEY");
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = ""
-            });
+                ApiKey = apikey
+            }); 
             
             var completionResult = await openAiService.Completions.CreateCompletion(new CompletionCreateRequest()
             {
-                Prompt = prompt,
+                Prompt = requestBody,
                 MaxTokens = 300,
                 Temperature = 0.9f,
-            }, OpenAI.GPT3.ObjectModels.Models.Davinci);
+            }, "davinci-instruct-beta"); // Submit Pull Request to add ADA and Davinci Intrust Models accessable in Model Class
 
             if (completionResult.Successful)
             {
@@ -61,8 +64,8 @@ namespace pittman_mvc.Controllers
                 {
                     throw new Exception("Unknown Error");
                 }
-                Console.WriteLine($"{completionResult.Error.Code}: {completionResult.Error.Message}");
-                return null;
+                return $"{completionResult.Error.Code}: {completionResult.Error.Message}";
+                
             }
         }
     }
