@@ -27,10 +27,10 @@
   },
   {
     "Id": 3,
-    "Title": "pittman.io - Portfolio Website",
+    "Title": "pittman.in - Portfolio Website",
     "Image": "portfolioLanding.png",
-    "Description": "This website. Will keep iterating on this, need to add an interaction element to the orb ( come back when the ChatGPT API is offered publically..) ",
-    "Stack": ".NET CORE, React, Three-React-Fiber, Reactstrap",
+    "Description": "This website will continuously be iterated on. Check back in with time! ",
+    "Stack": ".NET CORE, React, Three-React-Fiber, Reactstrap, Azure",
     "HasWebLink": false,
     "WebUrl": "",
     "HasGithubLink": true,
