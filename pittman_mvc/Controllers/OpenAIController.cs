@@ -39,7 +39,7 @@ namespace pittman_mvc.Controllers
         {
             string requestBody = await new StreamReader(Request.Body).ReadToEndAsync();
             Console.WriteLine(requestBody);
-            string apikey = "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"; //Environment.GetEnvironmentVariable("OPENAPI_KEY");
+            string apikey = Environment.GetEnvironmentVariable("OPENAPI_KEY");
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
                 ApiKey = apikey
