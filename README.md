@@ -20,18 +20,25 @@ Visit https://www.pittman.in to view the website live!
 
 To run the portfolio locally, you will need to have the following tools installed on your computer:
 
-.NET CORE SDK
-Node.js
+.NET CORE SDK : ``` https://aka.ms/dotnet-core-applaunch?framework=Microsoft.AspNetCore.App&framework_version=6.0.0&arch=x64&rid=win-x64&os=win10 ```
+Node.js (18.0+)
 Once you have these tools installed, follow these steps to run the portfolio locally:
 
 Clone this repository to your local machine
 
-```git clone https://github.com/<username>/react-dotnet-portfolio.git```
+```git clone https://github.com/dpittman7/pittman_portfolio.git```
 
 Navigate to the root directory of the repository and install the required dependencies
 
-` cd pittman_portfolio
-npm install `
+``` cd pittman_portfolio ```
+
+Then clone the repo for the frontend, you want the location to be within the /pittman_portfolio directory
+
+``` https://github.com/dpittman7/pittman_react.git ```
+
+within the root directories, run npm install
+
+``` npm install ```
 
 Start the .NET CORE API
 
@@ -59,4 +66,4 @@ I welcome feedback to the React .NET CORE Portfolio repository. If you have an i
 
 License
 -
-This repository is licensed under the MIT License. See LICENSE for more information
+It's a portfolio, free game. Just @me or star the repo atleast please.

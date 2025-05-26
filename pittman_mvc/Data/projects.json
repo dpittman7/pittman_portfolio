@@ -42,10 +42,62 @@
     "Id": 4,
     "Title": "Discord Internet Radio Streaming Bot",
     "Image": "streamfinder.png",
-    "Description": "(IN DEVELOPMENT) Allows user to search various internet radio stations and select one to stream into active voice channel.",
+    "Description": "(IN DEVELOPMENT) Allows user to search various internet radio stations and select one to stream into active voice channel. Other various discord bots exist as well.",
     "Stack": "Discord.py",
     "HasWebLink": false,
     "WebUrl": "",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  },
+  {
+    "Id": 5,
+    "Title": "UNICRI - Main Site",
+    "Image": "unicri.png",
+    "Description": "(Superbuff Contractor) Implemented a redesign of their main site.",
+    "Stack": "Drupal",
+    "HasWebLink": true,
+    "WebUrl": "https://unicri.org/",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  }
+  ,{
+    "Id": 6,
+    "Title": "UNICRI - AI Innovation Toolkit",
+    "Image": "aitoolkit.png",
+    "Description": "(Superbuff Contractor) Developed a custom module that implements the innovation toolkit survey as decoupled drupal blocks.",
+    "Stack": "Drupal",
+    "HasWebLink": true,
+    "WebUrl": "https://aitoolkit.unicri.it/",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  }
+  ,{
+    "Id": 7,
+    "Title": "HR2DAY - Phaser.js ",
+    "Image": "hr2day.png",
+    "Description": "(Superbuff Contractor) Point and click adventure game set in a HR enviroment. Handled sound design and QA in this game.",
+    "Stack": "Typescript, Phaser.js",
+    "HasWebLink": true,
+    "WebUrl": "https://www.hr2day.com/game/",
+    "HasGithubLink": false,
+    "GithubUrl": "",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  }
+  ,{
+    "Id": 8,
+    "Title": "Jumbo Tech Campus - Recruitment AR Game ",
+    "Image": "jumbo.png",
+    "Description": "(Superbuff Contractor) AR Web game that used the gyroscope of the phone and within a Three.js Canvas, simulated movement patterns of geometries moving around the user. Implemented zig zag, flee, static, pivot, and random movement behaviors in 3D space using quartions..",
+    "Stack": "Typescript, Vue3, Three.js, Web",
+    "HasWebLink": true,
+    "WebUrl": "https://jumbo.superbuff.nl/",
     "HasGithubLink": false,
     "GithubUrl": "",
     "HasDownloadLink": false,
