@@ -1,53 +1,46 @@
-
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using OpenAI.GPT3.Extensions;
 using OpenAI.GPT3.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// 1) Register your controllers, Swagger, etc.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// 2) Pull in your user‑secrets into IConfiguration and add the OpenAI service
+builder.Configuration.AddUserSecrets<Program>();
+builder.Services.AddOpenAIService();
+
+// 3) Build the app
 var app = builder.Build();
 
+// 4) Static file + default file for *all* environments
+var fileProvider = new FileExtensionContentTypeProvider();
+fileProvider.Mappings[".glb"] = "model/gltf-buffer";
 
+app.UseDefaultFiles();                          // will look for index.html
+app.UseStaticFiles(new StaticFileOptions {
+  ContentTypeProvider = fileProvider
+});
 
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-else
-{
-    // https://stackoverflow.com/questions/65513290/asp-net-core-glb-file-not-found-whereas-the-file-was-copy
-    StaticFileOptions options = new StaticFileOptions { ContentTypeProvider = new FileExtensionContentTypeProvider() };
-    ((FileExtensionContentTypeProvider)options.ContentTypeProvider).Mappings.Add(new KeyValuePair<string, string>(".glb", "model/gltf-buffer"));
 
-    app.UseDefaultFiles();
-    app.UseStaticFiles(options);
-}
-
+// 5) Routing / HTTPS / Authorization
 app.UseHttpsRedirection();
-
+app.UseRouting();
 app.UseAuthorization();
 
+// 6) Your API controllers
 app.MapControllers();
 
+// 7) **SPA fallback** — any non‑API route returns index.html
+app.MapFallbackToFile("index.html");
+
 app.Run();
-
-// OpenAI Dependency Injection Config
-var aibuilder = new ConfigurationBuilder()
-    .AddUserSecrets<Program>();
-
-IConfiguration configuration = aibuilder.Build();
-var serviceCollection = new ServiceCollection();
-serviceCollection.AddScoped(_ => configuration);
-serviceCollection.AddOpenAIService();
