@@ -1,0 +1,16 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/src                             # for dotnet watch
+      - ./pittman_react/build:/app/wwwroot # override wwwroot with your local build
+    command: >
+      dotnet watch run
+      --project pittman_mvc/portfolio.csproj
+      --urls http://0.0.0.0:5000
+    ports:
+      - "5000:5000"

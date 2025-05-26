@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    working_dir: /src/pittman_mvc
+    volumes:
+      - ./pittman_mvc:/src/pittman_mvc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_URLS=http://+:5000
+    command: dotnet watch run --project portfolio.csproj --urls http://0.0.0.0:5000
+    ports:
+      - "5000:5000"
+
+  react:
+    image: node:16-alpine
+    working_dir: /app
+    volumes:
+      - ./pittman_react:/app
+      - /app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
